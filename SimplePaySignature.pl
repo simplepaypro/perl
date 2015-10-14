@@ -49,4 +49,6 @@ my %params = (
 );
 
 print make_concat_string("payment","mykey",\%params) . "\n";
-print make_signature_string("result","mykey","md5",\%params) . "\n";
+print make_signature_string("payment","mykey","md5",\%params) . "\n";
+print make_signature_string("payment","mykey","sha256",\%params) . "\n";
+print make_signature_string("payment","mykey","sha512",\%params) . "\n";
